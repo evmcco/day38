@@ -1,0 +1,26 @@
+<section class="section">
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Address</td>
+                <td>Street</td>
+                <td>City</td>
+                <td>State</td>
+                <td>Menu Link</td>
+            </tr>
+        </thead>
+        ${restaurantsList.map(restaurant => 
+            `<tr>
+                <td><a href="/restaurants/${restaurant.id}">${restaurant.name}</a></td> 
+                <td>${restaurant.address}</td>
+                <td>${restaurant.street}</td>
+                <td>${restaurant.city}</td>
+                <td>${restaurant.state}</td>
+                <td><a href="${restaurant.menu}">View Menu</a></td>
+            </tr>`
+            ).join('')
+        }
+    </table>    
+</section>
+
